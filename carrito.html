@@ -1,0 +1,731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+<title>BAV</title> 
+<meta name="description" content=""> 
+<meta name="keywords" content="">
+
+<!-- CSS -->
+<link href="css/estilos-bootstrap.css" rel="stylesheet">
+<link href="css/estilos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+    
+<!-- FAVICON -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;900&family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- OWL -->
+<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+  
+</head>
+
+<body>
+
+
+
+<a href="#" class="wp" target="_blank"><img src="img/wapp.png"></a>
+
+
+
+<!-- CARRITO -->
+<div class="sidecart text-center carritoSide">
+  
+  <ul class="nav flex-column mb-2">
+    <div class="text-light h4 m-0 px-4 text-center mt-4 mb-2">
+      <h2 class="font-cormorant fw-bold">Mi carrito</h2>
+      <div class="d-inline closeCart" onclick="toggleCart()" ><img src="img/close2.png" alt=""></div>
+    </div>
+
+    <li class="productoCarrito mt-1 mb-2">
+      <img src="img/prod1.jpg" class="foto border">
+      <div class="info d-flex flex-column align-items-start">
+        <p class="title text-dark text-decoration-none m-0 p-0 h5 mb-2">Café en grano tostado montibello moka x kg.</p>
+        <div class="price h5 fw-bold mb-0 pb-0">$2.401,00</div>
+      </div>
+      <a href="#" class="btn botBorrar"> <i class="bi bi-trash"></i> </a>
+    </li>
+
+    <li class="productoCarrito mt-1 mb-2">
+      <img src="img/prod2.jpg" class="foto border">
+      <div class="info d-flex flex-column align-items-start">
+        <p class="title text-dark text-decoration-none m-0 p-0 h5 mb-2">Té taragüi sin ensobrar (50 unidades)</p>
+        <div class="price h5 fw-bold mb-0 pb-0">$170,00</div>
+      </div>
+      <a href="#" class="btn botBorrar"> <i class="bi bi-trash"></i> </a>
+    </li>
+
+    <li class="productoCarrito mt-1 mb-2">
+      <img src="img/prod3.jpg" class="foto border">
+      <div class="info d-flex flex-column align-items-start">
+        <p class="title text-dark text-decoration-none m-0 p-0 h5 mb-2">Dulce de leche alfa pampa x 450 g.</p>
+        <div class="price h5 fw-bold mb-0 pb-0">$819,00</div>
+      </div>
+      <a href="#" class="btn botBorrar"> <i class="bi bi-trash"></i> </a>
+    </li>
+
+  </ul>
+  <div class="d-flex mx-4 justify-content-between bordeBot">
+    <p>Subtotal</p>
+    <p class="fw-700">$999.999</p>
+  </div>
+  <div class="mx-4 bordeBot">
+    <p class="w-100 mb-1">Código de descuento</p>
+    <form class="campo">
+      <input type='text' name='' value='' placeholder='' class="elcampo">
+      <input type='button' name='' value='VALIDAR' placeholder='' class="btnSend">
+    </form>
+  </div>
+  <div class="d-flex mx-4 justify-content-between bordeBot2">
+    <p>Descuento</p>
+    <p>$-100.000</p>
+  </div>
+  <div class="d-flex mx-4 justify-content-between mb-3">
+    <p class="fw-bold h5">TOTAL</p>
+    <p class="fw-bold h5">$999.999</p>
+  </div>
+  <a href="#">
+    <button type="button" class="btn btnPedido mb-2">FINALIZAR PEDIDO</button>
+    <button type="button" class="btn btnSeguir">SEGUIR COMPRANDO</button>
+  </a>
+
+</div>
+<!-- CARRITO -->
+
+
+<!-- HEADER -->
+<header class="section-header">
+
+  <section class="barraTop">
+    <p>WWW.GALA.COM</p>
+  </section>
+  
+  <section class="py-2">
+    <nav class="navbar navbar-main navbar-expand-xl navbar-light">
+      <div class="container-xl">
+
+        <a class="navbar-brand" href="#"><img src="img/logo2.png" class="logo"></a>
+
+        <!-- ICONOS MOBILE -->
+        <div class="contUserMob d-flex d-xl-none align-content-center barraIconosDesktop">
+
+          <div class="dropdown dropSearch d-none d-md-flex">
+            <form action="">
+              <input type='text' name='' value='Buscar..' placeholder='' class="campo">
+              <button class="btn"></button>
+            </form>
+          </div>
+
+          <div class="dropdown dropCuenta">
+            <button class="btn dropdown-toggle w-100 d-flex justify-content-between align-items-center text-primary pe-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="img/ic-user.svg" class="icon me-1"><span class="d-none d-md-block">Usuario</span>
+            </button>
+            <ul class="dropdown-menu w-100 bg-primary">
+              <li><a class="dropdown-item text-white" href="#">Mi cuenta</a></li>
+              <li><a class="dropdown-item text-white" href="#">Cerrar sesión</a></li>
+            </ul>
+          </div>
+
+          <button class="btn p-0 d-flex align-items-center cart" onclick="toggleCart()">
+            <img src="img/ic-cart.svg" alt="">
+          </button>
+
+          <button class="btn p-0 d-flex d-md-none align-items-center search pe-3 searchMob">
+            <img src="img/ic-search.svg" alt="">
+            <ul>
+              <li>
+                <form action="">
+                  <input type='text' name='' value='Buscar..' placeholder='' class="campo">
+                  <input type='text' name='' value='BUSCAR' placeholder='' class="btn">
+                  <div class="close">X</div>
+                </form>
+              </li>
+            </ul>
+          </button>
+
+          <img src="img/ic-menu.svg" class="abreMenuMobile d-block d-xl-none" alt="">
+
+        </div>
+
+
+        <!-- MENU DESKTOP -->
+        <div class="collapse navbar-collapse" id="main_nav2">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-3 mt-lg-0">
+
+            <!-- CATEGORIA -->
+            <li class="nav-item dropdown menuItem me-2">
+              <a class="nav-link dropdown-toggle dropdown-toggle2 fw-500 text-primary" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                PRODUCTOS
+              </a>
+              <ul class="dropdown-menu dropMenu01 dropMenuNivel1 bg-secondary" aria-labelledby="navbarDropdown">
+          
+                <li class="nav-item dropdown drop-down02">
+                  <a class="nav-link dropdown-toggle fw-500 text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false"><small>Subcategoría 1</small></a>
+                  <ul class="dropdown-menu sub-menu02 dropMenuNivel2 menuNivel2 bg-secondary">
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-item fw-500 text-white" href="#"><small>Item 01</small></a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-item fw-500 text-white" href="#"><small>Item 02</small></a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-item fw-500 text-white" href="#"><small>Item 03</small></a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-item fw-500 text-white" href="#"><small>Item 04</small></a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item dropdown drop-down02">
+                  <a class="nav-link dropdown-toggle fw-500 text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false"><small>Subcategoría 2</small></a>
+                  <ul class="dropdown-menu sub-menu02 dropMenuNivel2 menuNivel2 bg-secondary">
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-item fw-500 text-white" href="#"><small>Item 01</small></a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-item fw-500 text-white" href="#"><small>Item 02</small></a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-item fw-500 text-white" href="#"><small>Item 03</small></a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-item fw-500 text-white" href="#"><small>Item 04</small></a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item dropdown drop-down02">
+                  <a class="nav-link dropdown-toggle fw-500 text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false"><small>Subcategoría 3</small></a>
+                  <ul class="dropdown-menu sub-menu02 dropMenuNivel2 menuNivel2 bg-secondary">
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-item fw-500 text-white" href="#"><small>Item 01</small></a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-item fw-500 text-white" href="#"><small>Item 02</small></a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-item fw-500 text-white" href="#"><small>Item 03</small></a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-item fw-500 text-white" href="#"><small>Item 04</small></a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item dropdown drop-down02">
+                  <a class="nav-link linked fw-500 text-white" href="#"><small>Ver todo</small></a>
+                </li>
+
+              </ul>
+            </li>
+
+            <!-- CATEGORIA -->
+            <li class="nav-item dropdown menuItem me-2">
+              <a class="nav-link fw-500 text-primary" href="#">CONTACTO</a>
+            </li>
+
+          </ul>
+
+    
+          <!-- ICONOS DESKTOP -->
+          <div class="barraIconosDesktop d-none d-lg-flex align-content-center">
+
+            <div class="dropdown dropSearch d-none d-md-flex">
+              <form action="">
+                <input type='text' name='' value='Buscar..' placeholder='' class="campo">
+                <button class="btn"></button>
+              </form>
+            </div>
+
+            <div class="dropdown dropCuenta">
+              <button class="btn dropdown-toggle w-100 d-flex justify-content-between align-items-center text-primary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="img/ic-user.svg" class="icon me-1"><small class="me-1 text-primary">Usuario</small>
+              </button>
+              <ul class="dropdown-menu w-100 bg-secondary">
+                <li><a class="dropdown-item text-white" href="#">Mi cuenta</a></li>
+                <li><a class="dropdown-item text-white" href="#">Cerrar sesión</a></li>
+              </ul>
+            </div>
+
+            <button class="btn p-0 d-flex align-items-center cart" onclick="toggleCart()">
+              <div class="position-relative">
+                <img src="img/ic-cart.svg" class="me-3">
+                <div class="countItem">10</div>
+              </div>
+              <small class="me-1 text-primary">$999.999,00</small>
+            </button>
+
+          </div>
+    
+        </div>
+
+      </div>
+    </nav>
+  </section>
+
+
+
+  <!-- MENU MOBILE -->
+  <div class="menuMobile">
+  
+    <form action="">
+      <input type='text' name='' value='Buscar..' placeholder='' class="campo">
+      <input type='text' name='' value='BUSCAR' placeholder='' class="btn">
+    </form>
+
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-3 mt-lg-0 navbarMobile">
+
+      <!-- Categoria -->
+      <li class="nav-item dropdown me-2">
+        <a class="nav-item px-3 dropdown-toggle text-dark botProductos" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <small class="text-dark me-1">Categoría 1</small>
+        </a>
+        <ul class="dropdown-menu dropMenu01" aria-labelledby="navbarDropdown">
+    
+          <li class="nav-item dropdown drop-down02">
+            <a class="nav-item dropdown-toggle text-dark d-flex align-items-center justify-content-between me-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <small>Subcategoría 1</small>
+            </a>
+            <ul class="dropdown-menu sub-menu02 dropMenuNivel2" aria-labelledby="navbarDropdown">
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 01</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 02</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 03</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 04</small></a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown drop-down02">
+            <a class="nav-item dropdown-toggle text-dark d-flex align-items-center justify-content-between me-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <small>Subcategoría 2</small>
+            </a>
+            <ul class="dropdown-menu sub-menu02 dropMenuNivel2" aria-labelledby="navbarDropdown">
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 01</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 02</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 03</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 04</small></a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown drop-down02">
+            <a class="nav-item dropdown-toggle text-dark d-flex align-items-center justify-content-between me-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <small>Subcategoría 3</small>
+            </a>
+            <ul class="dropdown-menu sub-menu02 dropMenuNivel2" aria-labelledby="navbarDropdown">
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 01</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 02</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 03</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 04</small></a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </li>
+
+      <!-- Categoria -->
+      <li class="nav-item dropdown me-2">
+        <a class="nav-item px-3 dropdown-toggle text-dark botProductos" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <small class="text-dark me-1">Categoría 2</small>
+        </a>
+        <ul class="dropdown-menu dropMenu01" aria-labelledby="navbarDropdown">
+    
+          <li class="nav-item dropdown drop-down02">
+            <a class="nav-item dropdown-toggle text-dark d-flex align-items-center justify-content-between me-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <small>Subcategoría 1</small>
+            </a>
+            <ul class="dropdown-menu sub-menu02 dropMenuNivel2" aria-labelledby="navbarDropdown">
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 01</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 02</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 03</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 04</small></a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown drop-down02">
+            <a class="nav-item dropdown-toggle text-dark d-flex align-items-center justify-content-between me-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <small>Subcategoría 2</small>
+            </a>
+            <ul class="dropdown-menu sub-menu02 dropMenuNivel2" aria-labelledby="navbarDropdown">
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 01</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 02</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 03</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 04</small></a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown drop-down02">
+            <a class="nav-item dropdown-toggle text-dark d-flex align-items-center justify-content-between me-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <small>Subcategoría 3</small>
+            </a>
+            <ul class="dropdown-menu sub-menu02 dropMenuNivel2" aria-labelledby="navbarDropdown">
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 01</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 02</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 03</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 04</small></a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </li>
+
+      <!-- Categoria -->
+      <li class="nav-item dropdown me-2">
+        <a class="nav-item px-3 dropdown-toggle text-dark botProductos" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <small class="text-dark me-1">Categoría 3</small>
+        </a>
+        <ul class="dropdown-menu dropMenu01" aria-labelledby="navbarDropdown">
+    
+          <li class="nav-item dropdown drop-down02">
+            <a class="nav-item dropdown-toggle text-dark d-flex align-items-center justify-content-between me-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <small>Subcategoría 1</small>
+            </a>
+            <ul class="dropdown-menu sub-menu02 dropMenuNivel2" aria-labelledby="navbarDropdown">
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 01</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 02</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 03</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 04</small></a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown drop-down02">
+            <a class="nav-item dropdown-toggle text-dark d-flex align-items-center justify-content-between me-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <small>Subcategoría 2</small>
+            </a>
+            <ul class="dropdown-menu sub-menu02 dropMenuNivel2" aria-labelledby="navbarDropdown">
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 01</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 02</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 03</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 04</small></a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown drop-down02">
+            <a class="nav-item dropdown-toggle text-dark d-flex align-items-center justify-content-between me-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <small>Subcategoría 3</small>
+            </a>
+            <ul class="dropdown-menu sub-menu02 dropMenuNivel2" aria-labelledby="navbarDropdown">
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 01</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 02</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 03</small></a>
+              </li>
+              <li class="nav-item dropdown drop-down02 drop-down03">
+                <a class="nav-link text-dark" href="#"><small class="text-dark me-3 ms-2">Item 04</small></a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </li>
+
+      <!-- Categoria -->
+      <li class="nav-item dropdown me-2">
+        <a class="nav-item px-3 text-dark botProductos" href="#">
+          <small class="text-dark me-1">Categoría 4</small>
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+  <!-- MENU MOBILE -->
+
+
+</header>
+<!-- HEADER -->
+
+
+
+<div class="fixHeader"></div>
+
+
+
+
+
+<!-- LISTADO -->
+<section class="container-xl mb-5 mt-4">
+  <div class="row mar0 pad0">
+
+
+    <!-- PRODUCTOS -->
+    <div class="col-12 col-lg-8 col-xl-9 columnaProductos lista">
+  
+      <div class="productoCarrito">
+          <img src="img/prod1.jpg" class="w-100 foto">
+          <div class="nombre">
+            <img src="img/25off.png" class="marca">
+            <h6 class="font-cormorant mb-0">Café montibello en grano tostado brasil x kg.</h6>
+            <p class="d-block d-md-none price"><del>$2.228,00</del> $2.500,00</p>
+          </div>
+          <div class="campoCantidad">
+            <div class="numero">
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+            </div>
+          </div>
+          <p class="price d-none d-md-block"><del>$2.228,00</del> $2.500,00</p>
+          <button class="btnErase">X</button>
+      </div>
+
+      <div class="productoCarrito">
+        <img src="img/prod2.jpg" class="w-100 foto">
+        <div class="nombre">
+          <h6 class="font-cormorant mb-0">Té taragüi sin ensobrar</h6>
+          <p class="d-block d-md-none price">$170,00</p>
+        </div>
+        <div class="campoCantidad">
+          <div class="numero">
+            <button>-</button>
+            <span>1</span>
+            <button>+</button>
+          </div>
+        </div>
+        <p class="price d-none d-md-block">$170,00</p>
+        <button class="btnErase">X</button>
+      </div>
+
+      <div class="productoCarrito">
+        <img src="img/prod3.jpg" class="w-100 foto">
+        <div class="nombre">
+          <h6 class="font-cormorant mb-0">Dulce de leche alfa pampa</h6>
+          <p class="d-block d-md-none price">$819,00</p>
+        </div>
+        <div class="campoCantidad">
+          <div class="numero">
+            <button>-</button>
+            <span>1</span>
+            <button>+</button>
+          </div>
+        </div>
+        <p class="price d-none d-md-block">$819,00</p>
+        <button class="btnErase">X</button>
+      </div>
+
+      <div class="productoCarrito">
+        <img src="img/prod4.jpg" class="w-100 foto">
+        <div class="nombre">
+          <img src="img/enviogratis.png" class="marca">
+          <h6 class="font-cormorant mb-0">Palitos salados pep</h6>
+          <p class="d-block d-md-none price">$97,00</p>
+        </div>
+        <div class="campoCantidad">
+          <div class="numero">
+            <button>-</button>
+            <span>1</span>
+            <button>+</button>
+          </div>
+        </div>
+        <p class="price d-none d-md-block">$97,00</p>
+        <button class="btnErase">X</button>
+      </div>
+
+      <div class="productoCarrito">
+        <img src="img/prod1.jpg" class="w-100 foto">
+        <div class="nombre">
+          <img src="img/25off.png" class="marca">
+          <h6 class="font-cormorant mb-0">Café montibello en grano tostado brasil x kg.</h6>
+          <p class="d-block d-md-none price"><del>$2.228,00</del> $2.500,00</p>
+        </div>
+        <div class="campoCantidad">
+          <div class="numero">
+            <button>-</button>
+            <span>1</span>
+            <button>+</button>
+          </div>
+        </div>
+        <p class="price d-none d-md-block"><del>$2.228,00</del> $2.500,00</p>
+        <button class="btnErase">X</button>
+      </div>
+
+      <div class="productoCarrito">
+        <img src="img/prod2.jpg" class="w-100 foto">
+        <div class="nombre">
+          <h6 class="font-cormorant mb-0">Té taragüi sin ensobrar</h6>
+          <p class="d-block d-md-none price">$170,00</p>
+        </div>
+        <div class="campoCantidad">
+          <div class="numero">
+            <button>-</button>
+            <span>1</span>
+            <button>+</button>
+          </div>
+        </div>
+        <p class="price d-none d-md-block">$170,00</p>
+        <button class="btnErase">X</button>
+      </div>
+
+
+
+    </div>
+    <!-- PRODUCTOS // FIN -->
+
+
+    
+    <!-- SUBTOTAL -->
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 ms-auto">
+
+      <div class="card mb-2 infoSubtotal">
+
+        <div class="input-group mb-3 contDiscount">
+          <p class="w-100 m-0 mb-1">Código de descuento</p>
+          <form class="campo d-flex align-items-stretch justify-content-between">
+            <input type="text" name="" value="" placeholder="" class="elcampo">
+            <input type="button" name="" value="VALIDAR" placeholder="" class="btnSend">
+          </form>
+        </div>
+
+        <div class="card-body">
+
+          <dl class="dlist-align d-flex justify-content-between mb-0">
+            <dt class="fw-normal">Subtotal:</dt>
+            <dd class="text-right fw-800">$999.999</dd>
+          </dl>
+
+          <dl class="dlist-align d-flex justify-content-between mb-0">
+            <dt class="fw-normal">Descuento:</dt>
+            <dd class="text-right">$-100.000</dd>
+          </dl>
+
+          <dl class="dlist-align d-flex justify-content-between mb-0 position-relative">
+            <dt class="fw-bold black">TOTAL:</dt>
+            <dd class="text-right"><strong class="black">$999.999</strong></dd>
+          </dl>
+
+          <a href="#" class="btn w-100 btnComprar mb-2 mt-3"> FINALIZAR COMPRA </a>
+          <a href="categorias-lista-todos.html" class="btn w-100 btnSeguir"> SEGUIR COMPRANDO </a>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- SUBTOTAL // FIN -->
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-8 colLogo">
+      <img src="img/logo.png" class="logo">
+      <a href="#" class="text-white opacity-75">Defensa del consumidor</a>
+    </div>
+    <div class="col-12 col-md-3 col-lg-2 mt-4 mt-md-0 text-center text-md-start">
+      <h4>Menú</h4>
+      <ul class="mar0 pad0">
+        <li><a href="#">- Productos</a></li>
+        <li><a href="#">- Contacto</a></li>
+      </ul>
+    </div>
+    <div class="col-12 col-md-3 col-lg-2 mt-4 mt-md-0 text-center text-md-start">
+      <h4>Información útil</h4>
+      <ul class="mar0 pad0">
+        <li><a href="#">- Preguntas frecuentes</a></li>
+        <li><a href="#">- Política de Privacidad</a></li>
+        <li><a href="#">- Términos y Condiciones</a></li>
+        <li><a href="#">- Botón de arrepentimiento</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="legal">
+  <div class="col-12">
+    <p>©TIENDA BAV. Integrated by Business Media Lab. Powered by easycommerce®</p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/scripts.js"></script>
+    
+</body>
+
+</html>
